@@ -5,7 +5,7 @@ if(!isset($_SESSION['nombre'])){
   echo '
     <script>
       alert("Por favor debes iniciar sesión");
-      window.location.href = "index.php";
+      window.location.href = "../index.php";
     </script>
   ';
   session_destroy();
@@ -35,14 +35,14 @@ include "../conexiones/config.php";
   <div class="prueba">
     <nav  class="navbar navbar sticky-top navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.php"><img src="../imagenes/CORA.png" width="70px" alt="logo"></a>
+        <a class="navbar-brand" href="../landing.php"><img src="../imagenes/CORA.png" width="70px" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarSupportedContent" >
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="blogg.php">Home</a>
+              <a class="nav-link " aria-current="page" href="../landing.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Mis pedidos</a>
@@ -76,7 +76,7 @@ include "../conexiones/config.php";
             <input class="form-control" type="search" placeholder="Buscar" name="termino" id="buscar" aria-label="Search">
             <button  type="button" onclick="buscar_ahora($('#buscar').val());" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
-          <a href="index.php"><button class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cerrar Sesion</button></a>
+          <a href="../index.php"><button class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cerrar Sesion</button></a>
         </div>
       </div>
      </nav>
@@ -136,26 +136,33 @@ include "../conexiones/config.php";
   </div>
 </div>
 
-
-
-
-<div class="container-fluid" style="background-color: rgb(31, 30, 30); height: 250px; color: aliceblue;">
-<div class="col-md-12 float-md-end mb-3 ms-md-3" style="padding: 20px ;">
-  <div class="row align-items-center">
-    <div class="col" style="text-align: justify;">
-      <a href=""><img src="../imagenes/CORA.png" class="img-fluid" style="height: 100px;" alt="..."></a></div>
-    
-      <div class="col-md-3 float-md-end mb-3 ms-md-3" style="padding-top: 20px;">
-        <div class="row align-items-center">
-          <div class="col-md-12 position-relative" style="text-align: right;">
-            <a href=""><img src="../imagenes/CORA.png" class="img-fluid" style="height: 100px;" alt="..."></a></div>
+<footer class="container-fluid" style="background-color: rgb(31, 30, 30); height: 250px; color: aliceblue;">
+    <div class="row align-items-center">
+       <div class="col-4 align-items-center" style="padding: 50px ;">
+          <a href="../landing.php"><img src="../imagenes/CORA.png" class="img-fluid" style="height: 100px;" alt="..."></a> 
+      </div>   
+      <div class="col-4 row align-items-center" style="padding: 20px ; text-align: center;">
+      <div class="footer-links">
+            <ul style="display:block">
+                <li style="list-style-type:none; padding-top: 10px"><a style="text-decoration: none; color:aliceblue" href="../landing.php"><i class="fa-solid fa-house" style="color: #63E6BE;"></i> Inicio</a></li>
+                <li style="list-style-type:none; padding-top: 10px"><a style="text-decoration: none; color:aliceblue" href="#"><i class="fa-solid fa-location-dot" style="color: #63E6BE;"></i> Ubicación</a></li>
+               <li style="list-style-type:none; padding-top: 10px"><a style="text-decoration: none; color:aliceblue" href="#"><i class="fa-solid fa-question" style="color: #63E6BE;"></i> CoraLine</a></li>
+                <li style="list-style-type:none; padding-top: 10px"><a style="text-decoration: none; color:aliceblue" href="#"><i class="fa-solid fa-phone" style="color: #63E6BE;"></i> Contacto</a></li>
+            </ul>
+          </div>
+      </div>  
+      <div class="col-4 align-items-center" style="padding: 20px ; text-align: right;">
+          <a href="../landing.php"><img src="../imagenes/CORA.png" class="img-fluid" style="height: 100px;" alt="..."></a> 
+      </div>        
+     </div>
+     <div class="container text-center">
+  <div class="row align-items-end">
+    <div class="col">
+    &copy;2024 Cosechando Raíces CORA. Todos los derechos reservados.
+    </div>
   </div>
 </div>
-</div>
-</div>
-</div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </footer>
+<<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
