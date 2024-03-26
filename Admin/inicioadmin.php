@@ -208,6 +208,7 @@ width: 100px;
 
     </style>
     <meta charset="UTF-8">
+    <link rel="icon" href="../imagenes/CORA.png" type="image/jpeg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iniciar sesion</title>   
 </head>

@@ -27,7 +27,7 @@ echo'
 else  {
     echo "
     <div class='alert alert-danger' role='alert' style='paddding-top:'25px''>
-      Error al Agregar Usuario
+      Error al Registrar Usuario
     </div>";
 
 

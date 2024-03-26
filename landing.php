@@ -19,6 +19,7 @@ include "conexiones/config.php";
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="imagenes/CORA.png" type="image/jpeg">
     <title>CORA</title>
     <script src="https://kit.fontawesome.com/25d245ab67.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" > 
@@ -171,23 +172,7 @@ include "conexiones/config.php";
           </div>
       </div>
       </div>
-<div style="padding: 20px 0px 0px 0px;">
-  <div class="container-fluid" style="background-color: rgb(31, 30, 30); height: 250px; color: aliceblue;">
 
-    <div class="col-md-12 float-md-end mb-3 ms-md-3" style="padding: 20px ;">
-      <div class="row align-items-center">
-        <div class="col" style="text-align: justify;">
-          <a href=""><img src="imagenes/CORA.png" class="img-fluid" style="height: 100px;" alt="..."></a> 
-        </div>
-        
-          <div class="col-md-3 float-md-end mb-3 ms-md-3" style="padding-top: 20px;">
-            <div class="row align-items-center">
-              <div class="col-md-12 position-relative" style="text-align: right;">
-                <a href=""><img src="imagenes/CORA.png" class="img-fluid" style="height: 100px;" alt="..."></a>         </div>
-      </div>
-    </div>
-  </div>
-</div>
 <footer class="container-fluid" style="background-color: rgb(31, 30, 30); height: 250px; color: aliceblue;">
     <div class="row align-items-center">
        <div class="col-4 align-items-center" style="padding: 50px ;">

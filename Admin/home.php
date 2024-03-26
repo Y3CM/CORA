@@ -19,6 +19,7 @@ if(!isset($_SESSION['nombre'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/25d245ab67.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../imagenes/CORA.png" type="image/jpeg">
     <title>CORA</title>
     <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">

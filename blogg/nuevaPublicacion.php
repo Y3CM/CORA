@@ -75,7 +75,7 @@ include "../conexiones/config.php";
                 echo (empty($_SESSION['CARRITO']))?0:count($_SESSION['CARRITO']);
                 ?>)</i></a>
                   <li class="nav-item">
-        <a class="nav-link "  href="nuevaPublicacion.php">Publicar <i class="fa-solid fa-plus" ></i></a>
+        <a class="nav-link "  href="#">Publicar <i class="fa-solid fa-plus" ></i></a>
       </li>
           </ul>
           <form class="d-flex" style="padding-right: 70px ;" role="search" action="buscar.php" method="get">
@@ -86,25 +86,8 @@ include "../conexiones/config.php";
           <a href="../conexiones/cerrar.php"><button class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cerrar Sesion</button></a>
         </div>
       </div>
-      
     </nav>
-  <div class="contain text-center" style="padding: 25px 0px 0px 0px; ">
-    <ul class="nav justify-content-center" >
-      <li class="nav-item">
-        <a class="nav-link active" style=" color:#7EB031;" aria-current="page" href="../landing.php">Tienda CORA</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" style=" color:#7EB031;" href="#">Ayuda</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" style=" color:#7EB031;" href="#">Tendencia</a>
-        </li>
-      <li class="nav-item">
-        <a class="nav-link" style=" color:#7EB031;" href="#recientes">Nuevas publicaciones</a>
-      </li>
-    </ul>
-  
-  <div class="offcanvas offcanvas-start show text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
+    <div class="offcanvas offcanvas-start show text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasDarkLabel" ><img src="../imagenes/cora.png" width="100px" alt="logo">CORA</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -126,40 +109,61 @@ include "../conexiones/config.php";
     </div>
   </div>
 </div>
- 
+<?php 
+include "../conexiones/publicar.php";
+?>
 <div class="container">
+        <form style="padding: 50px;" method="POST"  class="row g-3 needs-validation">
 
-<h1 style=" color:#7EB031;">Blogg CORA</h1>
-<br>
-<h2 style="color:#7EB031;">¿Que es CORA?</h2>
-<br>
-<video controls width="100%"><source src="../Video/video2.0.mp4" type="video/mp4"></video>
-<br>
-    <h2 style=" color:#7EB031; padding: 20px;" id="recientes">Últimas publicaciones del blog</h2>
-    <div class="row">
-        <?php
-        
-       
-        $query = "SELECT * FROM entradas WHERE estado='verificado' ORDER BY fecha_publicacion DESC LIMIT 5"; 
-        $result = $conexion->query($query);
-        while ($row = $result->fetch_assoc()) {
-            echo '<div class="col-md-4" style="padding-bottom:50px">';
-            echo '<div class="card">';
-            echo '<img src="'.$row['imagen'].'" class="card-img-top" style="height: 200px;" alt="Imagen de la entrada">';
-            echo '<div class="card-body" style="height: 220px;">';
-            echo '<h5 class="card-title">'.$row['titulo'].'</h5>';
-            echo '<p class="card-text">'.$row['resumen'].'</p>';
-            echo '</div>';
-            echo '<a href="publicacion.php?id='.$row['id'].'" class="btn btn-outline-primary btn-sm" style="border:none">Leer más</a>';
-            echo '</div>';
-            echo '</div>';
-        }
-        ?>
+            <h1 class="title">Nueva publicación</h1>
+            <input type="hidden" value="pendiente" name="estado">
+              <div class="col-md-8 position-relative">
+                <label for="validationTooltip01" class="form-label"></label>
+                <input type="text" name="titulo" class="form-control"  placeholder="Titulo" required>
+                <div class="valid-tooltip">
+                  Looks good!
+                </div>
+              </div>
+              
+              <div class="col-md-4 position-relative">
+                <label for="validationTooltipUsername" class="form-label"></label>
+                <div class="input-group has-validation">
+                  <label class="input-group-text" id="validationTooltipUsernamePrepend">@</label>
+                  <input type="text" name="autor" class="form-control"  aria-describedby="validationTooltipUsernamePrepend" placeholder="Autor" required>
+                  <div class="invalid-tooltip">
+                    Please choose a unique and valid username.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 position-relative">
+                <label for="validationTooltip03" class="form-label"></label>
+                <input type="text" name="img" class="form-control"  placeholder="link de la imagen" required>
+                <div class="invalid-tooltip">
+                  Please provide a valid city.
+                </div>
+              </div>
+              <div class="col-md-12 position-relative">
+                <label for="validationTooltip02" class="form-label"></label>
+                <textarea type="text" name="contenido" class="form-control"  placeholder="Contenido" required></textarea>
+                <div class="valid-tooltip">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-12 position-relative">
+                <label for="validationTooltip03" class="form-label"></label>
+                <textarea type="text" name="resumen" class="form-control"  placeholder="Describe el contenido" required></textarea>
+                <div class="invalid-tooltip">
+                  Please provide a valid city.
+                </div>
+              </div>
+              
+          </div>
+                <div class="contain text-center">
+       <button type="submit" name="btn_publicar" value="ok" class="btn btn-success ">Publicar</button>   
     </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-<footer class="container-fluid" style="background-color: rgb(31, 30, 30); height: 250px; color: aliceblue;">
+        </div>
+        </form>
+        <footer class="container-fluid" style="background-color: rgb(31, 30, 30); height: 250px; color: aliceblue;">
     <div class="row align-items-center">
        <div class="col-4 align-items-center" style="padding: 50px ;">
           <a href="landing.php"><img src="../imagenes/CORA.png" class="img-fluid" style="height: 100px;" alt="..."></a> 
@@ -186,4 +190,6 @@ include "../conexiones/config.php";
   </div>
 </div>
     </footer>
-</html>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html> 
