@@ -24,6 +24,7 @@ if(!isset($_SESSION['nombre'])){
     <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
     <span class="navbar-brand mb-0 h1">ADMIN CORA</span>
+    <a href="../landing.php"><button class="btn btn-outline-success"><img src="../imagenes/CORA.png" height="30px" alt="">Tienda CORA</button></a>
     <a href="../conexiones/cerrarAdmin.php"><button class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cerrar Sesion</button></a>
   </div>
 </nav>
@@ -34,7 +35,7 @@ if(!isset($_SESSION['nombre'])){
   <a href="estadisticas.php" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-solid fa-chart-simple"></i></i> Estadisticas</a></li></a>
   <a href="users.php" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-regular fa-user"></i> Usuarios</a></li></a>
   <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-solid fa-gear"></i> Ajustes</li></a>
-  <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-solid fa-blog"></i></i> Blogg</li></li></a>
+  <a href="blogg.php" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-solid fa-blog"></i></i> Blogg</li></li></a>
   <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-solid fa-list"></i> Categorias</li></a>
   
   <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-regular fa-lemon"></i> Productos</li></li></a>
@@ -99,7 +100,7 @@ if(!isset($_SESSION['nombre'])){
         </div>
         <div class="col align-self-end">
         <div class="card text-bg-info mb-3" style="max-width: 18rem;">
-        <a class="card-body;" style="text-decoration: none;" href="#">
+        <a class="card-body;" style="text-decoration: none;" href="blogg.php">
         <div class="card-body">
     <h5 class="card-title" style="color: white; text-align:center;">blogg</h5>
     <p class="card-text" style="color: white; text-align:center;"><i class="fa-solid fa-blog fa-xl"></i></p>

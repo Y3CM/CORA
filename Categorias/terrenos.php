@@ -77,7 +77,7 @@ include "../conexiones/config.php";
             <input class="form-control" type="search" placeholder="Buscar" name="termino" id="buscar" aria-label="Search">
             <button  type="button" onclick="buscar_ahora($('#buscar').val());" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
-          <a href="../index.php"><button class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cerrar Sesion</button></a>
+          <a href="../conexiones/cerrar.php"><button class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cerrar Sesion</button></a>
         </div>
       </div>
      </nav>
@@ -164,7 +164,6 @@ include "../conexiones/config.php";
   </div>
 </div>
     </footer>
-<
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

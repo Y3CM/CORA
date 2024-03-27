@@ -29,9 +29,10 @@ function eliminar(){
    return respuesta;
 }
   </script>
-<nav class="navbar bg-body-tertiary" data-bs-theme="dark">
+   <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
     <span class="navbar-brand mb-0 h1">ADMIN CORA</span>
+    <a href="../landing.php"><button class="btn btn-outline-success"><img src="../imagenes/CORA.png" height="30px" alt="">Tienda CORA</button></a>
     <a href="../conexiones/cerrarAdmin.php"><button class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cerrar Sesion</button></a>
   </div>
 </nav>
@@ -43,7 +44,7 @@ function eliminar(){
   <a href="users.php" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-regular fa-user"></i> Usuarios</a></li></a>
   <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-solid fa-gear"></i> Ajustes</li></a>
   <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-solid fa-list"></i> Categorias</li></a>
-  <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-solid fa-blog"></i></i> Blogg</li></li></a>
+  <a href="blogg.php" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-solid fa-blog"></i></i> Blogg</li></li></a>
   <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-regular fa-lemon"></i> Productos</li></li></a>
 </div>
 <form class="row g-3 needs-validation; col-10" method="POST">
@@ -111,6 +112,7 @@ function eliminar(){
           <div class="container">
           <div class="card mb-3">
           <h5 class="card-title">Publicado por @<?=$datos->autor ?></h5>
+          <h5 class="card-title">Estado <span class="badge text-bg-info"><?=$datos->estado ?></span></h5>
             <img src="<?=$datos->imagen?>" class="card-img-top" height="400px" alt="...">
              <div class="card-body">
             <h5 class="card-title"><?=$datos->titulo ?></h5>

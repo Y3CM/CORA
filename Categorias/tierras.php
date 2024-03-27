@@ -77,7 +77,7 @@ include "../conexiones/config.php";
             <input class="form-control" type="search" placeholder="Buscar" name="termino" id="buscar" aria-label="Search">
             <button  type="button" onclick="buscar_ahora($('#buscar').val());" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
-          <a href="../index.php"><button class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cerrar Sesion</button></a>
+          <a href="../conexiones/cerrar.php"><button class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cerrar Sesion</button></a>
         </div>
       </div>
      </nav>

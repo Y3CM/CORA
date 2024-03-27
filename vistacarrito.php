@@ -1,4 +1,18 @@
-<?php session_start();?>
+<?php
+include "conexiones/conexion.php";
+session_start();
+if(!isset($_SESSION['nombre'])){
+  echo '
+    <script>
+      alert("Por favor debes iniciar sesión");
+      window.location.href = "index.php";
+    </script>
+  ';
+  session_destroy();
+  exit(); 
+}
+include "conexiones/config.php"; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,29 +28,32 @@
 include "conexiones/conexion.php";
 include "conexiones/config.php"; 
 ?>
-    <nav  class="navbar navbar sticky-top navbar-expand-lg bg-body-secondary">
+      <nav  class="navbar navbar sticky-top navbar-expand-lg bg-body-secondary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.php"><img src="imagenes/CORA.png"  width="45px" alt="logo"></a>
+          <a class="navbar-brand" href="landing.php"><img src="imagenes/CORA.png" width="45px" alt="logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse " id="navbarSupportedContent" >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="index.php">Home</a>
+                <a class="nav-link " aria-current="page" href="landing.php">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Mis pedidos</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Categorias
                 </a>
                 <ul class="dropdown-menu" >
-                  <li><a class="dropdown-item" href="#">Plantulas</a></li>
+                  <li><a class="dropdown-item" href="Categorias/plantulas.php">Plantulas</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Productos</a></li>
+                  <li><a class="dropdown-item" href="Categorias/productos.php">Productos</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Tierras</a></li>
+                  <li><a class="dropdown-item" href="Categorias/tierras.php">Tierras</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Terrenos</a></li>
+                  <li><a class="dropdown-item" href="Categorias/terrenos.php">Terrenos</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -44,12 +61,9 @@ include "conexiones/config.php";
                 Todo
               </a>
             </li>
-              
             <li class="nav-item">
                 <a class="nav-link " aria-current="page" href="vistacarrito.php"><i class="fa-solid fa-cart-plus">(<?php 
                 echo (empty($_SESSION['CARRITO']))?0:count($_SESSION['CARRITO']);
-                
-                
                 ?>)</i></a>
             </ul>
             <form class="d-flex" style="padding-right: 70px ;" role="search" action="buscar.php" method="get">
@@ -57,12 +71,10 @@ include "conexiones/config.php";
               <input class="form-control" type="search" placeholder="Buscar" name="termino" id="buscar" aria-label="Search">
               <button  type="button" onclick="buscar_ahora($('#buscar').val());" class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
-            <a href="iniciarsesion.php"><button class="btn btn-outline-success"><i class="fa-solid fa-arrow-right-to-bracket"></i> Iniciar sesion</button></a>
+            <a href="conexiones/cerrar.php"><button class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cerrar Sesion</button></a>
           </div>
         </div>
-        <a href="registro.php"></a><button type="button" class="btn btn-outline-success"></a>
-          Registro
-        </button>
+        
       </nav>
 <div class="container">
 <div class="col-10">
@@ -104,7 +116,8 @@ include "conexiones/config.php";
 <?php }else{ ?>
 <div class="alert  alert-success">
 No hay productos en el carrito...
-
+</div>
+</div>
 </div>
 <?php } ?>
 <footer class="container-fluid" style="background-color: rgb(31, 30, 30); height: 250px; color: aliceblue;">
