@@ -119,8 +119,12 @@ if(!isset($_SESSION['nombre'])){
 
     <div class="contain text-center" style="padding-bottom: 25px;">
     <h1><span class="badge text-bg-secondary">Agrega Tus Productos</span></h1>
+<<<<<<< HEAD
 </div>
 <div class="container" style="background: #949794; padding-bottom: 50px;">
+=======
+  <div class="container" style="background: #949794; padding-bottom: 50px;">
+>>>>>>> 3dc27cd02578cbd3b9f06c52694492f25f74f0b7
     <form class="row g-3 needs-validation" action="vender_producto.php" method="post" novalidate >
         <div class="col-md-4 position-relative">
           <label for="validationTooltip01" class="form-label">Nombre Producto</label>
@@ -200,7 +204,11 @@ if(!isset($_SESSION['nombre'])){
         <div class="contain text-center">
           <button  class="btn btn-success" name="AgregarP" values="Ok" type="submit">Agregar</button>
         </div>
+<<<<<<< HEAD
       </form>
+=======
+    </form>
+>>>>>>> 3dc27cd02578cbd3b9f06c52694492f25f74f0b7
 </div>
 <footer class="container-fluid" style="background-color: rgb(31, 30, 30); height: 250px; color: aliceblue;">
     <div class="row align-items-center">
