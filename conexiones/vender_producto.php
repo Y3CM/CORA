@@ -9,7 +9,7 @@
 <body style="background-color:#ffffff;">
 
 <?php
-$conexion = mysqli_connect("localhost:3306","root","","cora") or
+$conexion = mysqli_connect("localhost:3307","root","","cora") or
 die("Problemas con la conexión");
 
 $idProducto = mysqli_real_escape_string($conexion, $_REQUEST['Idproducto']);

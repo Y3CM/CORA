@@ -121,7 +121,7 @@ if(!isset($_SESSION['nombre'])){
     <h1><span class="badge text-bg-secondary">Agrega Tus Productos</span></h1>
 </div>
 <div class="container" style="background: #949794; padding-bottom: 50px;">
-    <form class="row g-3 needs-validation" action="vender_producto.php" method="post" novalidate >
+    <form class="row g-3 needs-validation" action="conexiones/vender_producto.php" method="post" novalidate >
         <div class="col-md-4 position-relative">
           <label for="validationTooltip01" class="form-label">Nombre Producto</label>
           <input type="text" class="form-control" id="validationTooltip01" name="ProductoNuevo" placeholder="Producto" required>
