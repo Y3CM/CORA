@@ -78,7 +78,8 @@ if(isset($_POST['btnAccion'])) {
                     foreach($_SESSION['CARRITO'] as $indice => $producto){
                         if($producto['ID'] == $ID){
                             unset($_SESSION['CARRITO'][$indice]);
-                        
+                            $_SESSION['CARRITO'] = array_values($_SESSION['CARRITO']);
+                            echo "<div class='alert alert-success' role='alert' style='padding-top:25px;'>Producto eliminado correctamente</div>";
                             break; 
                         }
                     }

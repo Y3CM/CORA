@@ -11,7 +11,7 @@ if(!isset($_SESSION['nombre'])){
   session_destroy();
   exit(); 
 }
-include "conexiones/config.php"; 
+// include "conexiones/config.php"; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +25,7 @@ include "conexiones/config.php";
   </head>
 <body>
 <?php 
-include "conexiones/conexion.php";
+// include "conexiones/conexion.php";
 include "conexiones/config.php"; 
 ?>
       <nav  class="navbar navbar sticky-top navbar-expand-lg bg-body-secondary">

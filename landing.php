@@ -142,34 +142,52 @@ include "conexiones/config.php";
       <?php include "conexiones/carrito.php";?>
      <a href="#"> <img src="imagenes/Promos.webp" alt="promos" style="padding-bottom: 25px ;" width="100%"></a>
       <h3 id="list-item-3" style="padding: 25px;">¡SOLO POR HOY! <span class="badge bg-secondary">New</span></h3>
+      
       <div class="container-fluid text-center">
-        <div class="row align-items-start">
-          <?php 
-          $sql=$conexion->query("select * from productos");
-          while ($datos=$sql->fetch_object()){?>
-        
-        <div class="col-3" style="padding: 25px">
-            <div class="card">
-              <img height="150px" src="<?=$datos->imagen?>" class="card-img-top" alt="...">
-              <div class="card-body">
-                <span><?=$datos->nombre?></spa n>
-                <h5 class="card-title">$<?=$datos->precio ?></h5>
-                <button type="button" class="btn btn-sm btn-info" data-bs-toggle="popover" data-bs-title="Descripción" data-bs-content="<?=$datos->descripcion ?>">Descripción</button>
-               <form action="" method="post">
-                <input type="hidden" name="ID" id="ID" value="<?php echo openssl_encrypt($datos->idproductos,COD,KEY);?>">
-                <input type="hidden" name="nombre" id="nombre" value="<?php echo openssl_encrypt( $datos->nombre,COD,KEY);?>">
-                <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt( $datos->precio,COD,KEY);?>">
-                <input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt( $datos->cantidad,COD,KEY);?>">
-              <button type="submit" class="btn btn-primary" name="btnAccion" value="Agregar">Agregar al carrito</button>
-              </form>
-              </div>
-            </div>
-          </div> 
-        
-        <?php }?>
-          
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <?php
+    $sql = $conexion->query("SELECT * FROM productos");
+    while ($datos = $sql->fetch_object()) { ?>
+      <div class="col">
+        <div class="card h-100">
+          <img src="<?= $datos->imagen ?>" class="card-img-top" alt="<?= $datos->nombre ?>" height="150">
+          <div class="card-body">
+            <h5 class="card-title"><?= $datos->nombre ?></h5>
+            <p class="card-text">$<?= $datos->precio ?></p>
+            <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalDescripcion<?= $datos->idproductos ?>">
+              Descripción
+            </button>
+            <form action="" method="post" class="mt-2">
+              <input type="hidden" name="ID" value="<?= openssl_encrypt($datos->idproductos, COD, KEY); ?>">
+              <input type="hidden" name="nombre" value="<?= openssl_encrypt($datos->nombre, COD, KEY); ?>">
+              <input type="hidden" name="precio" value="<?= openssl_encrypt($datos->precio, COD, KEY); ?>">
+              <input type="hidden" name="cantidad" value="<?= openssl_encrypt(1, COD, KEY); ?>">
+              <button type="submit" class="btn btn-primary btn-sm" name="btnAccion" value="Agregar">Agregar al carrito</button>
+            </form>
           </div>
+        </div>
       </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="modalDescripcion<?= $datos->idproductos ?>" tabindex="-1" aria-labelledby="modalDescripcionLabel<?= $datos->idproductos ?>" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalDescripcionLabel<?= $datos->idproductos ?>">Descripción de <?= $datos->nombre ?></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <?= $datos->descripcion ?>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php } ?>
+  </div>
+</div>
       </div>
 
 <footer class="container-fluid" style="background-color: rgb(31, 30, 30); height: 250px; color: aliceblue;">

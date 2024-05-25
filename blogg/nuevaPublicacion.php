@@ -171,7 +171,7 @@ include "../conexiones/publicar.php";
       <div class="col-4 row align-items-center" style="padding: 20px ; text-align: center;">
       <div class="footer-links">
             <ul style="display:block">
-                <li style="list-style-type:none; padding-top: 10px"><a style="text-decoration: none; color:aliceblue" href="landing.php"><i class="fa-solid fa-house" style="color: #63E6BE;"></i> Inicio</a></li>
+                <li style="list-style-type:none; padding-top: 10px"><a style="text-decoration: none; color:aliceblue" href="./blogg.php"><i class="fa-solid fa-house" style="color: #63E6BE;"></i> Inicio</a></li>
                 <li style="list-style-type:none; padding-top: 10px"><a style="text-decoration: none; color:aliceblue" href="#"><i class="fa-solid fa-location-dot" style="color: #63E6BE;"></i> Ubicación</a></li>
                <li style="list-style-type:none; padding-top: 10px"><a style="text-decoration: none; color:aliceblue" href="#"><i class="fa-solid fa-question" style="color: #63E6BE;"></i> CoraLine</a></li>
                 <li style="list-style-type:none; padding-top: 10px"><a style="text-decoration: none; color:aliceblue" href="#"><i class="fa-solid fa-phone" style="color: #63E6BE;"></i> Contacto</a></li>

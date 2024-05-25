@@ -101,7 +101,7 @@ if (isset($_GET['id'])) {
                 echo (empty($_SESSION['CARRITO']))?0:count($_SESSION['CARRITO']);
                 ?>)</i></a>
            <li class="nav-item">
-               <a class="nav-link "  href="#">Publicar <i class="fa-solid fa-plus" ></i></a>
+               <a class="nav-link "  href="./nuevaPublicacion.php">Publicar <i class="fa-solid fa-plus" ></i></a>
            </li>
           </ul>
           <form class="d-flex" style="padding-right: 70px ;" role="search" action="buscar.php" method="get">
@@ -208,7 +208,7 @@ if (isset($_GET['id'])) {
       <div class="col-4 row align-items-center" style="padding: 20px ; text-align: center;">
       <div class="footer-links">
             <ul style="display:block">
-                <li style="list-style-type:none; padding-top: 10px"><a style="text-decoration: none; color:aliceblue" href="landing.php"><i class="fa-solid fa-house" style="color: #63E6BE;"></i> Inicio</a></li>
+                <li style="list-style-type:none; padding-top: 10px"><a style="text-decoration: none; color:aliceblue" href="./blogg.php"><i class="fa-solid fa-house" style="color: #63E6BE;"></i> Inicio</a></li>
                 <li style="list-style-type:none; padding-top: 10px"><a style="text-decoration: none; color:aliceblue" href="#"><i class="fa-solid fa-location-dot" style="color: #63E6BE;"></i> Ubicación</a></li>
                <li style="list-style-type:none; padding-top: 10px"><a style="text-decoration: none; color:aliceblue" href="#"><i class="fa-solid fa-question" style="color: #63E6BE;"></i> CoraLine</a></li>
                 <li style="list-style-type:none; padding-top: 10px"><a style="text-decoration: none; color:aliceblue" href="#"><i class="fa-solid fa-phone" style="color: #63E6BE;"></i> Contacto</a></li>

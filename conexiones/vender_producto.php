@@ -6,10 +6,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" > 
 <title>vender</title>
 </head>
-<body style="background-color:#ffffff;">
+<body style="background-color:gray;">
 
 <?php
-$conexion = mysqli_connect("localhost:3307","root","","cora") or
+$conexion = mysqli_connect("localhost:3306","root","","cora") or
 die("Problemas con la conexión");
 
 $idProducto = mysqli_real_escape_string($conexion, $_REQUEST['Idproducto']);
