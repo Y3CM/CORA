@@ -101,6 +101,7 @@ include "conexiones/config.php";
       <form action="" method="post">  
       <input type="hidden" name="ID" id="ID" value="<?php echo openssl_encrypt($producto['ID'],COD,KEY);?>">
     <button class="btn btn-outline-danger" name="btnAccion" type="submit" value="Eliminar">Eliminar</button> 
+
     </form>
     </td>
     </tr>
