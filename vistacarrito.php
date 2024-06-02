@@ -119,6 +119,7 @@ include "conexiones/config.php";
 No hay productos en el carrito...
 </div>
 </div>
+<div class="col-2"></div>
 </div>
 <?php } ?>
 <footer class="container-fluid" style="background-color: rgb(31, 30, 30); height: 250px; color: aliceblue;">

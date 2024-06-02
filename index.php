@@ -233,7 +233,7 @@
         })
         .then(response => response.json())
         .then(data => {
-            // Aquí deberías actualizar el contenido de tu página con los resultados recibidos
+            
             console.log(data);
         })
         .catch(err => console.log(err));
