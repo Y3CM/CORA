@@ -38,7 +38,7 @@ if(!isset($_SESSION['nombre'])){
   <a href="blogg.php" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-solid fa-blog"></i></i> Blogg</li></li></a>
   <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-solid fa-list"></i> Categorias</li></a>
   
-  <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-regular fa-lemon"></i> Productos</li></li></a>
+  <a href="./productos.php" class="list-group-item list-group-item-action list-group-item-secondary"><i class="fa-regular fa-lemon"></i> Productos</li></li></a>
 </div>
       <div class="col-10">
         <h1>Bienvenido <span class="badge text-bg-dark">Admin</span></h1></h1>

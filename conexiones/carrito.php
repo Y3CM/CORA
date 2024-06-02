@@ -4,9 +4,9 @@ if(isset($_POST['btnAccion'])) {
         case 'Agregar':
             if(is_numeric(openssl_decrypt($_POST['ID'],COD,KEY))) {
                 $ID=openssl_decrypt($_POST['ID'],COD,KEY);
-                echo "<div class='alert alert-success' role='alert' style='padding-top:25px;'>
+                /* echo "<div class='alert alert-success' role='alert' style='padding-top:25px;'>
                     ID Agregado correctamente
-                </div>";
+                </div>"; */
             } else {
                 echo "<div class='alert alert-danger' role='alert' style='padding-top:25px;'>
                     Ups eso no tenía que pasar ID
@@ -28,9 +28,9 @@ if(isset($_POST['btnAccion'])) {
 
             if(is_numeric(openssl_decrypt($_POST['precio'],COD,KEY))) {
                 $PRECIO=openssl_decrypt($_POST['precio'],COD,KEY);
-                echo "<div class='alert alert-success' role='alert' style='padding-top:25px;'>
+               /*  echo "<div class='alert alert-success' role='alert' style='padding-top:25px;'>
                     PRECIO Agregado correctamente
-                </div>";
+                </div>"; */
             } else {
                 echo "<div class='alert alert-danger' role='alert' style='padding-top:25px;'>
                     Ups eso no tenía que pasar PRECIO
@@ -40,9 +40,9 @@ if(isset($_POST['btnAccion'])) {
 
             if(is_numeric(openssl_decrypt($_POST['cantidad'],COD,KEY))) {
                 $CANTIDAD=openssl_decrypt($_POST['cantidad'],COD,KEY);
-                echo "<div class='alert alert-success' role='alert' style='padding-top:25px;'>
+               /*  echo "<div class='alert alert-success' role='alert' style='padding-top:25px;'>
                     CANTIDAD Agregado correctamente
-                </div>";
+                </div>"; */
             } else {
                 echo "<div class='alert alert-danger' role='alert' style='padding-top:25px;'>
                     Ups eso no tenía que pasar CANTIDAD
@@ -76,7 +76,9 @@ if(isset($_POST['btnAccion'])) {
                 if(is_numeric(openssl_decrypt($_POST['ID'],COD,KEY))) {
                     $ID=openssl_decrypt($_POST['ID'],COD,KEY);
                     foreach($_SESSION['CARRITO'] as $indice => $producto){
-                        if($producto['ID'] == $ID){
+                        echo "ID del producto en el carrito: " . $producto['ID'] . "<br>"; 
+                        echo "ID que estamos buscando eliminar: " . $ID . "<br>";
+                        if($producto['ID'] === $ID){
                             unset($_SESSION['CARRITO'][$indice]);
                             $_SESSION['CARRITO'] = array_values($_SESSION['CARRITO']);
                             echo "<div class='alert alert-success' role='alert' style='padding-top:25px;'>Producto eliminado correctamente</div>";
