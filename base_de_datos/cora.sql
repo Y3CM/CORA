@@ -303,13 +303,7 @@
   end
   $$
   DELIMITER ;
-  DROP TRIGGER IF EXISTS `before_direccion_update`;
-  DELIMITER $$
-  CREATE TRIGGER `before_direccion_update` BEFORE UPDATE ON `usuarios` FOR EACH ROW begin
-  insert into modificaciones(Nombre,Apellido,Clave,rol,pais_residencia,ciudad_residencia,dir_residencia,celular,email) values (old.Nombre,old.Apellido,old.Contraseña,old.rol,old.pais_residencia,old.ciudad_residencia,old.dir_residencia,old.celular,old.email);
-  end
-  $$
-  DELIMITER ;
+ 
 
   -- --------------------------------------------------------
 

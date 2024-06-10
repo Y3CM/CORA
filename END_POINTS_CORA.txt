@@ -1,0 +1,63 @@
+http://localhost/CORA/api/get-all-products.php
+
+http://localhost/CORA/api/get-product.php?idproductos=YOUR_PRODUCT_ID
+
+http://localhost/CORA/api/create-product.php
+
+http://localhost/CORA/api/delete-product.php?idproductos=1
+
+http://localhost/CORA/api/update-producto.php?idproductos=1
+
+----------------------------crear----------------------------------------------
+{
+"idProducto":"2",
+"productoNuevo": "arroz crudo",
+"tipoNuevo": "integarl",
+"descripcion": "bal bla bla bla",
+"precio":"2500",
+"cantidad": "100",
+"categoriaV": "cereal",
+"imagen": "https://www.freepik.es/foto-gratis/arroz-molido-tazon-cuchara-madera-piso-cemento-negro_6446270.htm#fromView=search&page=1&position=1&uuid=b8986d14-40a7-403b-84ae-f0e31554cb5b"
+}
+
+---------------------------update-----------------------------------------------
+{
+"idProducto":"2",
+"updateProducto": "arroz crudo",
+"updateTipo": "integral",
+"updateDescripcion": "bal bla bla bla",
+"updatePrecio":"2500",
+"updateCantidad": "100",
+"updateCategoria": "cereal",
+"updateImagen": "https://www.freepik.es/foto-gratis/arroz-molido-tazon-cuchara-madera-piso-cemento-negro_6446270.htm#fromView=search&page=1&position=1&uuid=b8986d14-40a7-403b-84ae-f0e31554cb5b"
+}
+
+------------------------------------------------------------------------------------usuarios----------------------------------------------------------------------------------
+
+http://localhost/CORA/api/get-all-user.php
+
+http://localhost/CORA/api/get-user.php?num_doc=1193111340
+
+http://localhost/CORA/api/create-user.php
+
+http://localhost/CORA/api/delete-user.php?num_doc=258741369
+
+http://localhost/CORA/api/update-user.php?num_doc=987654321
+
+{
+"nombre_A":"Andres",
+"apellido_A": "Moreno",
+"rol_A": "Admin",
+"contraseña_A": "Andres1234",
+"tip_doc_A":"CC",
+"Numero_doc_A":"1023457386",
+"email_A":"andres@gmail.com",
+"pais_re_A":"Colombia",
+"ciudad_re_A":"Lima",
+"movil_A":"3041256789",
+"direcc_re_A":"calle falsa debajo del puente"
+}
+
+
+
+
