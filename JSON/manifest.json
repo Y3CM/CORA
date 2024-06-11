@@ -1,0 +1,26 @@
+{
+    "short_name": "CORA",
+    "name": "Cosechando Raices",
+    "icons": [
+      {
+        "src": "../imagenes/CORA.svg",
+        "sizes": "683x683",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "../imagenes/CORA.png",
+        "type": "image/png",
+        "sizes": "486x514"
+      },
+      {
+        "src": "../imagenes/CORA.svg",
+        "type": "image/png",
+        "sizes": "683x683"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",             
+    "theme_color": "#ffffff",
+    "background_color": "gray"
+  }
+  

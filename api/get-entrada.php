@@ -7,25 +7,25 @@ $crud = new Crud();
 
 if($_SERVER["REQUEST_METHOD"] == "GET")
 {
-$sql = "select * from usuarios where num_doc=".$_GET['num_doc'];
+$sql = "select * from entradas where id=".$_GET['id'];
 $res = $crud->read($sql);
 
 $count = mysqli_num_rows($res);
 
 if($count > 0)
 {
- $product = array();
+ $entrada = array();
 
  while($row = mysqli_fetch_array($res, MYSQLI_ASSOC))
  {
-	 $product[] = $row;
+	 $entrada[] = $row;
  }
 
- $result = array("status" => true , "userInfo" => $product);
+ $result = array("status" => true , "EntradaInfo" => $entrada);
 }
 else
 {
- $result = array("status" => false , "message" => 'user not found...');
+ $result = array("status" => false , "message" => 'entrada not found...');
 }
 
 echo json_encode($result);

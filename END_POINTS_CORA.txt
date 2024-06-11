@@ -32,7 +32,7 @@ http://localhost/CORA/api/update-producto.php?idproductos=1
 "updateImagen": "https://www.freepik.es/foto-gratis/arroz-molido-tazon-cuchara-madera-piso-cemento-negro_6446270.htm#fromView=search&page=1&position=1&uuid=b8986d14-40a7-403b-84ae-f0e31554cb5b"
 }
 
-------------------------------------------------------------------------------------usuarios----------------------------------------------------------------------------------
+-------------------------------------------------------------usuarios------------------------------------------------------
 
 http://localhost/CORA/api/get-all-user.php
 
@@ -43,6 +43,9 @@ http://localhost/CORA/api/create-user.php
 http://localhost/CORA/api/delete-user.php?num_doc=258741369
 
 http://localhost/CORA/api/update-user.php?num_doc=987654321
+
+http://localhost/CORA/api/login-user.php
+
 
 {
 "nombre_A":"Andres",
@@ -59,5 +62,30 @@ http://localhost/CORA/api/update-user.php?num_doc=987654321
 }
 
 
+{
+"email": "jo__021nes@hotmail.com",
+"contraseña": "134567"
+}
 
+---------------------------------------------------Entradas blog----------------------------------------------------------
+
+http://localhost/CORA/api/get-all-entradas.php
+
+http://localhost/CORA/api/get-entrada.php?id=1
+
+http://localhost/CORA/api/create-entrada.php
+
+http://localhost/CORA/api/update-entrada.php?id=1
+
+http://localhost/CORA/api/delete-entrada.php?id=258741369
+
+
+{
+"titulo":"",
+"contenido":"",
+"resumen":"",
+"autor":"",
+"img":"",
+"estado":""
+}
 

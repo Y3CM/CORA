@@ -33,7 +33,7 @@ $res = $crud->create($sql);
 
 if ($res)
 {
-	$result = array("status" => true , "message" => "Product Added Succefully...");
+	$result = array("status" => true , "message" => "User Added Succefully...");
 }
 else
 {

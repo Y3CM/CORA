@@ -14,23 +14,22 @@ $data = array();
 $data = json_decode(file_get_contents('php://input'),true);
 
 
-$nombre=$data["nombre"];
-$apellido=$data["apellido"];
-$contraseña=$data["contraseña"];
-$email=$data["email"];
-$pais_re=$data["pais"];
-$ciudad_re=$data["ciudad"];
-$movil=$data["movil"];
-$direc_res=$data["direccion"];
+$titulo=$data["titulo"];
+$contenido=$data["contenido"];
+$resumen=$data["resumen"];
+$autor=$data["autor"];
+$imagen=$data["img"];
+$estado=$data["estado"];
 
-$sql = "update usuarios set nombre = '$nombre' , email = '$email', contraseña = '$contraseña' , pais_residencia = '$pais_re', ciudad_residencia='$ciudad_re', celular='$movil', dir_residencia='$direc_res'  where num_doc=".$_GET['num_doc'];
+
+$sql = "update entradas set titulo = '$titulo' , contenido = '$contenido', resumen = '$resumen' , autor = '$autor', imagen='$imagen', estado='$estado'  where id=".$_GET['id'];
 $res = $crud->update($sql);
 
 
 
 if ($res)
 {
-	$result = array("status" => true , "message" => "User Updated Succefully...");
+	$result = array("status" => true , "message" => "Entrada Updated Succefully...");
 }
 else
 {

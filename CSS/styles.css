@@ -194,6 +194,7 @@ body{
 .link{
     color: #0e8d94;
 }
+
 button{
 background: linear-gradient(45deg,#F28D01,#00ab00);
 padding: 5px;
@@ -201,3 +202,4 @@ border-radius: 10px;
 cursor: pointer;
 width: 100px;
 }
+
