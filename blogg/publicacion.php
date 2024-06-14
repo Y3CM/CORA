@@ -2,7 +2,7 @@
 require_once "../conexiones/conexion.php";
 require_once "../conexiones/config.php"; 
 require_once "../functions/functions.php";
-verificar_session('../index.php');
+verificar_session('"../index.php"');
 
 if (isset($_GET['id'])) {
   $id_publicacion = $_GET['id'];

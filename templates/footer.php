@@ -1,7 +1,7 @@
 <footer class="container-fluid" style="background-color: rgb(31, 30, 30); height: 250px; color: aliceblue;">
     <div class="row align-items-center">
       <div class="col-4 align-items-center" style="padding: 50px ;">
-        <a href="index.php"><img src="../imagenes/CORA.png" class="img-fluid" style="height: 100px;" alt="..."></a>
+        <a href="index.php"><img src="./imagenes/CORA.png" class="img-fluid" style="height: 100px;" alt="..."></a>
       </div>
       <div class="col-4 row align-items-center" style="padding: 20px ; text-align: center;">
         <div class="footer-links">
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="col-4 align-items-center" style="padding: 20px ; text-align: right;">
-        <a href="index.php"><img src="../imagenes/CORA.png" class="img-fluid" style="height: 100px;" alt="..."></a>
+        <a href="index.php"><img src="./imagenes/CORA.png" class="img-fluid" style="height: 100px;" alt="logo"></a>
       </div>
     </div>
     <div class="container text-center">

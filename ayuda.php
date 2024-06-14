@@ -1,9 +1,8 @@
 <?php
 require_once  "conexiones/conexion.php";
-
-session_start();
 require_once "functions/functions.php";
 require_once "conexiones/config.php"; 
+verificar_session('"index.php"')
 ?>
 <!doctype html>
 <html lang="es">

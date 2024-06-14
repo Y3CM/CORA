@@ -1,9 +1,8 @@
 <?php
+require_once "../functions/functions.php";
+verificar_session('"../index.php"');
 require_once "../conexiones/conexion.php";
 require_once "../conexiones/config.php"; 
-require_once "../functions/functions.php";
-
-verificar_session('../index.php')
 ?>
 
 <!doctype html>

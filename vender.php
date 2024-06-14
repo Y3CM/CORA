@@ -1,7 +1,7 @@
 <?php
 include "conexiones/conexion.php";
 require_once "functions/functions.php";
-verificar_session('index.php');
+verificar_session('"index.php"');
 ?>
 
 <!doctype html>

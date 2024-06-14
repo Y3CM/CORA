@@ -1,6 +1,6 @@
 
   <header>
-  <nav class="navbar navbar sticky-top navbar-expand-lg bg-body-secondary">
+  <nav class="navbar sticky-top navbar-expand-lg bg-body-secondary">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.php"><img src="imagenes/CORA.png" width="45px" alt="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

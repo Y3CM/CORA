@@ -11,16 +11,16 @@ require "$location/$template.php";
 
 function verificar_session(string $location)
 {
-    $alert = '
-        <script>
-          alert("Por favor debes iniciar sesión");
-          window.location.href ='. $location . ';
-        </script>
-      ';
+    
 
     session_start();
     if(!isset($_SESSION['nombre'])){
-      echo $alert;
+      echo  '
+      <script>
+        alert("Por favor debes iniciar sesión");
+        window.location.href ='. $location . ';
+      </script>
+    ';
       session_destroy();
       exit(); 
                   
@@ -28,7 +28,7 @@ function verificar_session(string $location)
 
 };
 
-function get_publicacion($sql,$conexion)
+/* function get_publicacion($sql,$conexion)
 {
     if (isset($_GET['id'])) {
         $id_publicacion = $_GET['id'];
@@ -54,4 +54,11 @@ function get_publicacion($sql,$conexion)
         echo "No se proporcionó ID de publicación.";
         exit();
       }
-};
+}; */
+
+/* render_footer()
+{
+
+  return 
+
+}; */
