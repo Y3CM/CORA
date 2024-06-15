@@ -17,7 +17,7 @@ verificar_session('"index.php"');
 
 <?php 
 render_template('templates','links_navegacion');
-render_template('templates','modal');
+render_componentes('componentes','modal');
 render_template('templates','main');
 ?>
 

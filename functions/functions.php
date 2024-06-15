@@ -56,9 +56,9 @@ function verificar_session(string $location)
       }
 }; */
 
-/* render_footer()
+function render_componentes(string $location,string $componente)
 {
 
-  return 
+require "$location/$componente.php";
 
-}; */
+};

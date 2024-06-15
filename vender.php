@@ -13,7 +13,7 @@ verificar_session('"index.php"');
 <body>
    <?= 
    render_template('templates','links_navegacion');
-   render_template('templates','modal');
+   render_componentes('componentes','modal');
    ?>
     
     <div class="contain text-center" style="padding-bottom: 25px;">

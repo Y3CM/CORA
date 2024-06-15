@@ -13,7 +13,7 @@ render_template('templates','header');
 <body >
 <?= 
 render_template('templates','links_navegacion');
-render_template('templates','modal');
+render_componentes('componentes','modal');
 ?>
    
    <main class="container">
@@ -23,7 +23,7 @@ render_template('templates','modal');
     <div class="row">
         <div class="col-md-4">
             <div class="card text-bg-success mb-3">
-                <a class="card-body" style="text-decoration: none;" href="users.php">
+                <a class="card-body" style="text-decoration: none;" href="">
                     <div class="card-body">
                         <h5 class="card-title" style="color: white; text-align:center;">¿Como hago mi pedido?</h5>
                         <p class="card-text" style="color: white; text-align:center;"><i class="fa-solid fa-user-plus fa-xl"></i></p>
@@ -33,7 +33,7 @@ render_template('templates','modal');
         </div>
         <div class="col-md-4">
             <div class="card text-bg-warning mb-3">
-                <a class="card-body" style="text-decoration: none;" href="users.php">
+                <a class="card-body" style="text-decoration: none;" href="">
                     <div class="card-body">
                         <h5 class="card-title" style="color: white; text-align:center;">¿Devolucion de un producto?</h5>
                         <p class="card-text" style="color: white; text-align:center;"><i class="fa-solid fa-pen-to-square fa-xl"></i></p>
@@ -43,7 +43,7 @@ render_template('templates','modal');
         </div>
         <div class="col-md-4">
             <div class="card text-bg-secondary mb-3">
-                <a class="card-body" style="text-decoration: none;" href="estadisticas.php">
+                <a class="card-body" style="text-decoration: none;" href="">
                     <div class="card-body">
                         <h5 class="card-title" style="color: white; text-align:center;">Mas consultas</h5>
                         <p class="card-text" style="color: white; text-align:center;"><i class="fa-solid fa-chart-simple fa-xl"></i></p>

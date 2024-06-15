@@ -1,37 +1,21 @@
 <?php
-include "../conexiones/conexion.php";
-session_start();
-if(!isset($_SESSION['nombre'])){
-  echo '
-    <script>
-      alert("Por favor debes iniciar sesión");
-      window.location.href = "../index.php";
-    </script>
-  ';
-  session_destroy();
-  exit(); 
-}
-include "../conexiones/conexion.php";
-include "../conexiones/config.php"; 
+require_once "../conexiones/conexion.php";
+require_once "../conexiones/config.php";
+require_once "../functions/functions.php";
+verificar_session('"../index.php"');
 ?>
 <!doctype htsml>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <?=
+render_template('../templates',"head");
+?>
+
   <style>
     p {
       text-align: justify;
     }
 
   </style>
-    <title>CORA</title>
-    <script src="https://kit.fontawesome.com/25d245ab67.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="../imagenes/CORA.png" type="image/jpeg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" >  
-    <script src="https://kit.fontawesome.com/25d245ab67.js" crossorigin="anonymous"></script>
-  </head>
 <body>
   <div class="prueba">
     <nav  class="navbar navbar sticky-top navbar-expand-lg bg-body-tertiary">

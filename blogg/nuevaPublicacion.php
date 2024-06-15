@@ -24,7 +24,7 @@ render_template('../templates','headerBlog');
 <body>
  
  <?=
- render_template('../templates','modal');
+ render_componentes('../componentes','modal');
 require_once "../conexiones/publicar.php";
 ?>
 <main class="container">
