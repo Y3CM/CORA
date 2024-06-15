@@ -43,9 +43,9 @@ render_componentes('componentes','modal');
         </div>
         <div class="col-md-4">
             <div class="card text-bg-secondary mb-3">
-                <a class="card-body" style="text-decoration: none;" href="">
+                <a class="card-body" style="text-decoration: none;" href="./chatbot.php">
                     <div class="card-body">
-                        <h5 class="card-title" style="color: white; text-align:center;">Mas consultas</h5>
+                        <h5 class="card-title" style="color: white; text-align:center;">Usa CoraLine</h5>
                         <p class="card-text" style="color: white; text-align:center;"><i class="fa-solid fa-chart-simple fa-xl"></i></p>
                     </div>
                 </a>

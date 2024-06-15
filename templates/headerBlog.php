@@ -18,13 +18,13 @@
                 Categorias
               </a>
               <ul class="dropdown-menu" >
-                <li><a class="dropdown-item" href="#">Plantulas</a></li>
+                <li><a class="dropdown-item" href="plantulas.php">Plantulas</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Productos</a></li>
+                <li><a class="dropdown-item" href="productos.php">Productos</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Tierras</a></li>
+                <li><a class="dropdown-item" href="tierras.php">Tierras</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Terrenos</a></li>
+                <li><a class="dropdown-item" href="terrenos.php">Terrenos</a></li>
               </ul>
             </li>
             <li class="nav-item">

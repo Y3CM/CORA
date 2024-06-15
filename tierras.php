@@ -1,12 +1,12 @@
 <?php
-require_once "../conexiones/conexion.php";
-require_once "../conexiones/config.php";
-require_once "../functions/functions.php";
-verificar_session('"../index.php"');
+require_once "conexiones/conexion.php";
+require_once "conexiones/config.php";
+require_once "functions/functions.php";
+verificar_session('"index.php"');
 ?>
 <!doctype htsml>
 <html lang="es">
-<?=render_template('../templates','head')?>
+<?=render_template('templates','head')?>
   <style>
     p {
       text-align: justify;
@@ -14,16 +14,16 @@ verificar_session('"../index.php"');
 
   </style>
 <body>
- 
-  <?=render_template('../templates','header')?>
+
+    <?=render_template('templates','header')?>
      <div class="container">
 
-     <h1 style="text-align: center; padding: 20px"><b>Terrenos</b></h1>
+     <h1 style="text-align: center; padding: 20px"><b>Tierras</b></h1>
 
     <div class="container-fluid text-center">
         <div class="row align-items-start">
           <?php 
-          $sql=$conexion->query("select * from productos where sub_categorias_idsub_categorias = 533");
+          $sql=$conexion->query("select * from productos where sub_categorias_idsub_categorias = 524 or sub_categorias_idsub_categorias = 532");
           while ($datos=$sql->fetch_object()){?>
         
         <div class="col-3" style="padding: 25px">
@@ -50,11 +50,10 @@ verificar_session('"../index.php"');
       </div>
       </div>
   
-<?=render_componentes('../componentes','modal')?>
-
-
-<?=render_template('../templates','footer')?>
-
+<?=
+render_componentes('componentes','modal');
+render_template('templates','footer');
+?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
