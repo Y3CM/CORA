@@ -110,7 +110,7 @@
 
   DROP TABLE IF EXISTS `entradas`;
   CREATE TABLE `entradas` (
-    `id` int(11) NOT NULL auto increment,
+    `id` int(11) NOT NULL auto_increment PRIMARY KEY,
     `titulo` varchar(50) NOT NULL,
     `contenido` text NOT NULL,
     `fecha_publicacion` datetime NOT NULL,
