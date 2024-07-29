@@ -14,7 +14,8 @@ render_template('templates','header');
 <body>
 
 <main class="container">
-<section class="col-10">
+  <div class="row">
+<section class="col-8">
     <h3>Carrito</h3>
     <?php if(!empty($_SESSION['CARRITO'])){?>
 <table class="table">
@@ -56,8 +57,12 @@ render_template('templates','header');
 No hay productos en el carrito...
 </div>
 </section>
-<section class="col-2"></section>
+<section class="col-4">
+<div style="background-color: aqua; height:max-content; width:100%; border:solid" ></div>
+</section>
+</div>
 </main>
+
 <?php } ?>
 
 <?=render_template('templates','footer')?>
