@@ -5,6 +5,7 @@ render_template('templates','head');
 render_template('templates','header');
 render_template('templates','style_chat');
 render_componentes( 'componentes','chat');
+render_template('templates','footer');
 ?>
 <script src="JS/chatbot.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

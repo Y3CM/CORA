@@ -89,3 +89,6 @@ http://localhost/CORA/api/delete-entrada.php?id=258741369
 "estado":""
 }
 
+
+
+dar clikc para enviar al producto
