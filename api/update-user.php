@@ -22,8 +22,9 @@ $pais_re=$data["pais"];
 $ciudad_re=$data["ciudad"];
 $movil=$data["movil"];
 $direc_res=$data["direccion"];
+$tipo_doc=$data["documento"];
 
-$sql = "update usuarios set nombre = '$nombre' , email = '$email', contraseña = '$contraseña' , pais_residencia = '$pais_re', ciudad_residencia='$ciudad_re', celular='$movil', dir_residencia='$direc_res'  where num_doc=".$_GET['num_doc'];
+$sql = "UPDATE `usuarios` SET ,`tipo_doc`='$tipo_doc',`name`='$nombre',`last_name`='$apellido',`email`='$email',`password`='$contraseña',`movil`='$movil',`direccion`='direc_res',`update_at`='NOW()' where num_doc=".$_GET['num_doc'];
 $res = $crud->update($sql);
 
 
