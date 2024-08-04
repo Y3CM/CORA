@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `Cora`.`usuarios` (
   `email` VARCHAR(50) NOT NULL,
   `password` VARCHAR(255) NOT NULL,
   `movil` VARCHAR(45) NULL,
+  `ciudad` VARCHAR(45) NULL,
   `direccion` VARCHAR(45) NULL,
   `rol` VARCHAR(15) NOT NULL DEFAULT 'user',
   `create_at` DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
