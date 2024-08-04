@@ -13,18 +13,16 @@ $data = json_decode(file_get_contents('php://input'),true);
 
 //var_dump(json_decode(file_get_contents('php://input'), true));
 
-$idProducto =  $data["idProducto"];
-$productoNuevo = $data["productoNuevo"];
-$tipoNuevo = $data["tipoNuevo"];
+$nombre = $data["name"];
 $descripcion =  $data["descripcion"];
-$precio =  $data["precio"];
-$cantidad = $data["cantidad"];
-$categoriaV =  $data["categoriaV"];
+$precio = $data["precio"];
+$stock =  $data["stock"];
 $imagen = $data["imagen"];
+$user_id = $data["user_id"];	
+$categoria_id = $data["categoria_id"];
 
-
-$sql = "insert into productos (idproductos, nombre, tipo, descripcion, precio, cantidad, sub_categorias_idsub_categorias, carrito_de_compras_idcarrito_de_compras, imagen)  
-VALUES ('$idProducto', '$productoNuevo', '$tipoNuevo', '$descripcion', '$precio', '$cantidad', '$categoriaV', 0, '$imagen')";
+$sql = ("insert into productos (name, descripcion, precio, stock, imagen, updated_at, created_at, user_id, categoria_id")  
+VALUES ('$nombre', '$descripcion', '$precio', '$stock', '$imagen', NULL, NOW(), $user_id, $categoria_id)";
 $res = $crud->create($sql);     
 
 
