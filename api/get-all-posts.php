@@ -7,7 +7,7 @@ $crud = new Crud();
 
 if($_SERVER["REQUEST_METHOD"] == "GET")
 {
-$sql = "select * from entradas";
+$sql = "select * from posts";
 $res = $crud->read($sql);
 
 $count = mysqli_num_rows($res);
