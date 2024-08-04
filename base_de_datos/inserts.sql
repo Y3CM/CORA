@@ -1,14 +1,15 @@
 INSERT INTO `Cora`.`usuarios` (`num_doc`, `tipo_doc`, `name`, `last_name`, `email`, `password`, `movil`, `ciudad`, `direccion`, `rol`, `create_at`, `update_at`) VALUES
-(100000001, 'CC', 'Carlos', 'Sánchez', 'carlos.sanchez@example.com', 'password1', '3000000001', 'Calle 10', 'user', NOW(), NULL),
-(100000002, 'CC', 'Maria', 'Torres', 'maria.torres@example.com', 'password2', '3000000002', 'Calle 20', 'user', NOW(), NULL),
-(100000003, 'CC', 'Juan', 'Gómez', 'juan.gomez@example.com', 'password3', '3000000003', 'Calle 30', 'user', NOW(), NULL),
-(100000004, 'CC', 'Laura', 'Ramirez', 'laura.ramirez@example.com', 'password4', '3000000004', 'Calle 40', 'admin', NOW(), NULL),
-(100000005, 'CC', 'Andrés', 'Martínez', 'andres.martinez@example.com', 'password5', '3000000005', 'Calle 50', 'user', NOW(), NULL),
-(100000006, 'CC', 'Paula', 'Hernández', 'paula.hernandez@example.com', 'password6', '3000000006', 'Calle 60', 'user', NOW(), NULL),
-(100000007, 'CC', 'Luis', 'Mendoza', 'luis.mendoza@example.com', 'password7', '3000000007', 'Calle 70', 'user', NOW(), NULL),
-(100000008, 'CC', 'Isabel', 'Vargas', 'isabel.vargas@example.com', 'password8', '3000000008', 'Calle 80', 'user', NOW(), NULL),
-(100000009, 'CC', 'Pedro', 'Castro', 'pedro.castro@example.com', 'password9', '3000000009', 'Calle 90', 'user', NOW(), NULL),
-(100000010, 'CC', 'Sofía', 'García', 'sofia.garcia@example.com', 'password10', '3000000010', 'Calle 100', 'user', NOW(), NULL);
+(100000001, 'DNI', 'Juan', 'Pérez', 'juan.perez@example.com', 'password123', '123456789', 'Madrid', 'Calle Mayor 1', 'user', NOW(), NULL),
+(100000002, 'DNI', 'Ana', 'García', 'ana.garcia@example.com', 'password123', '123456788', 'Barcelona', 'Avenida Diagonal 2', 'user', NOW(), NULL),
+(100000003, 'DNI', 'Luis', 'Martínez', 'luis.martinez@example.com', 'password123', '123456787', 'Valencia', 'Gran Vía 3', 'user', NOW(), NULL),
+(100000004, 'DNI', 'María', 'López', 'maria.lopez@example.com', 'password123', '123456786', 'Sevilla', 'Calle de Sierpes 4', 'user', NOW(), NULL),
+(100000005, 'DNI', 'Carlos', 'Hernández', 'carlos.hernandez@example.com', 'password123', '123456785', 'Bilbao', 'Plaza Nueva 5', 'user', NOW(), NULL),
+(100000006, 'DNI', 'Laura', 'González', 'laura.gonzalez@example.com', 'password123', '123456784', 'Zaragoza', 'Calle Alfonso I 6', 'user', NOW(), NULL),
+(100000007, 'DNI', 'Javier', 'Sánchez', 'javier.sanchez@example.com', 'password123', '123456783', 'Murcia', 'Gran Vía Escultor Salzillo 7', 'user', NOW(), NULL),
+(100000008, 'DNI', 'Elena', 'Fernández', 'elena.fernandez@example.com', 'password123', '123456782', 'Palma', 'Carrer de Sant Miquel 8', 'user', NOW(), NULL),
+(100000009, 'DNI', 'Pedro', 'Jiménez', 'pedro.jimenez@example.com', 'password123', '123456781', 'Las Palmas', 'Calle Triana 9', 'user', NOW(), NULL),
+(100000010, 'DNI', 'Isabel', 'Moreno', 'isabel.moreno@example.com', 'password123', '123456780', 'Bilbao', 'Calle de García Rivero 10', 'user', NOW(), NULL);
+
 
 
 INSERT INTO `Cora`.`categorias` (`categoria`, `descripcion`, `create_at`, `updated_at`) VALUES
