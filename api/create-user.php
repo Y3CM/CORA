@@ -24,9 +24,9 @@ $email=$data["email_A"];
 $pais_re=$data["pais_re_A"];
 $ciudad_re=$data["ciudad_re_A"];
 $movil=$data["movil_A"];
-$direc_res=$data["direcc_re_A"];
+$direc_res=$data["direcc_re_A"];	
 
-$sql = "insert into `usuarios`(`num_doc`, `tipo_doc`, `name`, `last_name`, `email`, `password`, `movil`, `direccion`, `rol`, `create_at`, `update_at`)
+$sql = "insert into `usuarios`(`num_doc`, `tipo_doc`, `name`, `last_name`, `email`, `password`, `movil`, "ciudad",`direccion`, `rol`, `create_at`, `update_at`)
 values($numero_doc,'$rol','$nombre','$apellido','$tipo_doc','$pais_re','$ciudad_re','$direc_res',$movil,'$email','$contraseña',0)";
 $res = $crud->create($sql);
 
