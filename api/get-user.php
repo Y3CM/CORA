@@ -7,7 +7,7 @@ $crud = new Crud();
 
 if($_SERVER["REQUEST_METHOD"] == "GET")
 {
-$sql = "select * from usuarios where num_doc=".$_GET['num_doc'];
+$sql = "SELECT `num_doc`, `tipo_doc`, `name`, `last_name`, `email`, `password`, `movil`, `direccion`, `rol`, `create_at`, `update_at` FROM `usuarios` where num_doc=".$_GET['num_doc'];
 $res = $crud->read($sql);
 
 $count = mysqli_num_rows($res);
