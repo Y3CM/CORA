@@ -20,16 +20,17 @@ $resumen=$data["resumen"];
 $autor=$data["autor"];
 $imagen=$data["img"];
 $estado=$data["estado"];
+$categoria=$data["categoria"];
 
 
-$sql = "insert into entradas(titulo,contenido,fecha_publicacion,imagen,resumen,autor,estado) 
-    values('$titulo','$contenido',NOW(),'$imagen','$resumen','$autor','$estado')";
+$sql = "INSERT INTO `posts`(`id`, `titulo`, `resumen`, `contenido`, `image`, `categoria`, `estado`, `create_at`, `updated_at`, `autor`) 
+    values('$titulo',''$resumen,'$contenido','$imagen','$categoria','$estado',NOW(),NULL),'$autor'";
 $res = $crud->create($sql);     
 
 
 if ($res)
 {
-	$result = array("status" => true , "message" => "entrada Added Succefully...");
+	$result = array("status" => true , "message" => "post Added Succefully...");
 }
 else
 {
