@@ -19,7 +19,7 @@ $correo_usuario = $data["email"];
 $clave_usuario = $data["contraseña"];
 
 
-$sql = "select * from usuarios where email='".$correo_usuario."' and contraseña='".$clave_usuario."'";
+$sql = "SELECT `num_doc`, `tipo_doc`, `name`, `last_name`, `email`, `password`, `movil`, `direccion`, `rol`, `create_at`, `update_at` FROM `usuarios` where email='".$correo_usuario."' and contraseña='".$clave_usuario."'";
 
 $res = $crud->read($sql);
 
