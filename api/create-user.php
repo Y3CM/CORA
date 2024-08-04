@@ -26,7 +26,7 @@ $ciudad_re=$data["ciudad_re_A"];
 $movil=$data["movil_A"];
 $direc_res=$data["direcc_re_A"];
 
-$sql = "insert into usuarios(num_doc,rol,nombre,apellido,tipo_doc,pais_residencia,ciudad_residencia,dir_residencia,celular,email,contraseña,ID_carrito_de_compras)
+$sql = "insert into `usuarios`(`num_doc`, `tipo_doc`, `name`, `last_name`, `email`, `password`, `movil`, `direccion`, `rol`, `create_at`, `update_at`)
 values($numero_doc,'$rol','$nombre','$apellido','$tipo_doc','$pais_re','$ciudad_re','$direc_res',$movil,'$email','$contraseña',0)";
 $res = $crud->create($sql);
 
