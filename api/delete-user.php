@@ -7,7 +7,7 @@ $crud = new Crud();
 
 if($_SERVER["REQUEST_METHOD"] == "DELETE")
 {
-$sql = "delete from usuarios  where num_doc=".$_GET['num_doc'];
+$sql = "DELETE FROM `usuarios` where num_doc=".$_GET['num_doc'];
 $res = $crud->deletes($sql);
 
 if ($res)
