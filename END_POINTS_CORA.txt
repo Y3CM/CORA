@@ -64,20 +64,20 @@ http://localhost/CORA/api/login-user.php
 
 {
 "email": "jo__021nes@hotmail.com",
-"contraseña": "134567"
+"password": "134567"
 }
 
 ---------------------------------------------------Entradas blog----------------------------------------------------------
 
-http://localhost/CORA/api/get-all-entradas.php
+http://localhost/CORA/api/get-all-posts.php
 
-http://localhost/CORA/api/get-entrada.php?id=1
+http://localhost/CORA/api/get-post.php?id=1
 
-http://localhost/CORA/api/create-entrada.php
+http://localhost/CORA/api/create-post.php
 
-http://localhost/CORA/api/update-entrada.php?id=1
+http://localhost/CORA/api/update-post.php?id=1
 
-http://localhost/CORA/api/delete-entrada.php?id=258741369
+http://localhost/CORA/api/delete-post.php?id=258741369
 
 
 {
