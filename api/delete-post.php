@@ -7,12 +7,12 @@ $crud = new Crud();
 
 if($_SERVER["REQUEST_METHOD"] == "DELETE")
 {
-$sql = "delete from entradas  where id=".$_GET['id'];
+$sql = "delete from posts  where id=".$_GET['id'];
 $res = $crud->deletes($sql);
 
 if ($res)
 {
-	$result = array("status" => true , "message" => "entrada deleted Succefully...");
+	$result = array("status" => true , "message" => "posts deleted Succefully...");
 }
 else
 {
