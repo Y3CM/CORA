@@ -1,4 +1,4 @@
-INSERT INTO `Cora`.`usuarios` (`num_doc`, `tipo_doc`, `name`, `last_name`, `email`, `password`, `movil`, `direccion`, `rol`, `create_at`, `update_at`) VALUES
+INSERT INTO `Cora`.`usuarios` (`num_doc`, `tipo_doc`, `name`, `last_name`, `email`, `password`, `movil`, `ciudad`, `direccion`, `rol`, `create_at`, `update_at`) VALUES
 (100000001, 'CC', 'Carlos', 'Sánchez', 'carlos.sanchez@example.com', 'password1', '3000000001', 'Calle 10', 'user', NOW(), NULL),
 (100000002, 'CC', 'Maria', 'Torres', 'maria.torres@example.com', 'password2', '3000000002', 'Calle 20', 'user', NOW(), NULL),
 (100000003, 'CC', 'Juan', 'Gómez', 'juan.gomez@example.com', 'password3', '3000000003', 'Calle 30', 'user', NOW(), NULL),
