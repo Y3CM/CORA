@@ -9,6 +9,7 @@ INSERT INTO `Cora`.`usuarios` (`num_doc`, `tipo_doc`, `name`, `last_name`, `emai
 (100000008, 'DNI', 'Elena', 'Fernández', 'elena.fernandez@example.com', 'password123', '123456782', 'Palma', 'Carrer de Sant Miquel 8', 'user', NOW(), NULL),
 (100000009, 'DNI', 'Pedro', 'Jiménez', 'pedro.jimenez@example.com', 'password123', '123456781', 'Las Palmas', 'Calle Triana 9', 'user', NOW(), NULL),
 (100000010, 'DNI', 'Isabel', 'Moreno', 'isabel.moreno@example.com', 'password123', '123456780', 'Bilbao', 'Calle de García Rivero 10', 'user', NOW(), NULL);
+(119311135, 'CC', 'Yecm', 'Moscu', 'yecm@gmail.com', 'Jones123', '3197901010', 'Bilbao', 'Calle de García Rivero 10', 'admin', NOW(), NULL);
 
 
 

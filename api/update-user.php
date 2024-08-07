@@ -18,13 +18,12 @@ $nombre=$data["nombre"];
 $apellido=$data["apellido"];
 $contraseña=$data["contraseña"];
 $email=$data["email"];
-$pais_re=$data["pais"];
-$ciudad_re=$data["ciudad"];
+$ciudad=$data["ciudad"];
 $movil=$data["movil"];
-$direc_res=$data["direccion"];
-$tipo_doc=$data["documento"];
+$direccion=$data["direccion"];
+$tipo_doc=$data["tip_doc"];
 
-$sql = "UPDATE `usuarios` SET ,`tipo_doc`='$tipo_doc',`name`='$nombre',`last_name`='$apellido',`email`='$email',`password`='$contraseña',`movil`='$movil',`direccion`='direc_res',`update_at`='NOW()' where num_doc=".$_GET['num_doc'];
+$sql = "UPDATE `usuarios` SET `tipo_doc`='$tipo_doc',`name`='$nombre',`last_name`='$apellido',`email`='$email',`password`='$contraseña',`movil`='$movil',`direccion`='$direccion',`update_at`='NOW()' where num_doc=".$_GET['num_doc'];
 $res = $crud->update($sql);
 
 

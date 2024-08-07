@@ -16,10 +16,10 @@ $data = json_decode(file_get_contents('php://input'),true);
 
 
 $correo_usuario = $data["email"];
-$clave_usuario = $data["contraseña"];
+$clave_usuario = $data["password"];
 
 
-$sql = "SELECT `num_doc`, `tipo_doc`, `name`, `last_name`, `email`, `password`, `movil`, `direccion`, `rol`, `create_at`, `update_at` FROM `usuarios` where email='".$correo_usuario."' and password='".$clave_usuario."'";
+$sql = "SELECT * FROM `usuarios` where email='$correo_usuario' and password ='$clave_usuario'";
 
 $res = $crud->read($sql);
 
