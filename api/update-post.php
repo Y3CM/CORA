@@ -18,11 +18,11 @@ $titulo=$data["titulo"];
 $contenido=$data["contenido"];
 $resumen=$data["resumen"];
 $autor=$data["autor"];
-$imagen=$data["img"];
+$imagen=$data["imagen"];
 $estado=$data["estado"];
 
 
-$sql = "update entradas set titulo = '$titulo' , contenido = '$contenido', resumen = '$resumen' , autor = '$autor', imagen='$imagen', estado='$estado'  where id=".$_GET['id'];
+$sql = "update posts set titulo = '$titulo' , contenido = '$contenido', resumen = '$resumen' , autor = '$autor', image='$imagen', estado='$estado' , updated_at=NOW() where id=".$_GET['id'];
 $res = $crud->update($sql);
 
 

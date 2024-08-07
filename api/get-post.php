@@ -7,7 +7,7 @@ $crud = new Crud();
 
 if($_SERVER["REQUEST_METHOD"] == "GET")
 {
-$sql = "select * from entradas where id=".$_GET['id'];
+$sql = "select * from posts where id=".$_GET['id'];
 $res = $crud->read($sql);
 
 $count = mysqli_num_rows($res);
@@ -21,11 +21,11 @@ if($count > 0)
 	 $entrada[] = $row;
  }
 
- $result = array("status" => true , "EntradaInfo" => $entrada);
+ $result = array("status" => true , "Post Info" => $entrada);
 }
 else
 {
- $result = array("status" => false , "message" => 'entrada not found...');
+ $result = array("status" => false , "message" => 'Post not found...');
 }
 
 echo json_encode($result);

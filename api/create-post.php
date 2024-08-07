@@ -18,13 +18,13 @@ $titulo=$data["titulo"];
 $contenido=$data["contenido"];
 $resumen=$data["resumen"];
 $autor=$data["autor"];
-$imagen=$data["img"];
+$imagen=$data["imagen"];
 $estado=$data["estado"];
 $categoria=$data["categoria"];
 
 
 $sql = "INSERT INTO `posts`(`id`, `titulo`, `resumen`, `contenido`, `image`, `categoria`, `estado`, `create_at`, `updated_at`, `autor`) 
-    values('$titulo',''$resumen,'$contenido','$imagen','$categoria','$estado',NOW(),NULL),'$autor'";
+    values('','$titulo','$resumen','$contenido','$imagen','$categoria','$estado',NOW(),NULL,'$autor')";
 $res = $crud->create($sql);     
 
 

@@ -63,7 +63,7 @@ http://localhost/CORA/api/login-user.php
 
 
 {
-"email": "jo__021nes@hotmail.com",
+"email": "yecm@gmail.com",
 "password": "134567"
 }
 
@@ -81,12 +81,13 @@ http://localhost/CORA/api/delete-post.php?id=258741369
 
 
 {
-"titulo":"",
-"contenido":"",
-"resumen":"",
-"autor":"",
-"img":"",
-"estado":""
+"titulo":"prueba de titulo",
+"resumen":"resumen de prueba",
+"contenido":"este espacio es de contenido",
+"imagen":"prueba.jpg",
+"categoria":"test",
+"estado":0,
+"autor":"100000001"
 }
 
 

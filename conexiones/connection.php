@@ -19,7 +19,7 @@ class Connection
  
  public function db_connect()
  {
-	$this->host = 'localhost:3307';
+	$this->host = 'localhost:3306';
 	$this->user = 'root';
 	$this->pass = ''; 
 	$this->dbname = 'cora'; 
