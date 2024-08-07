@@ -1,5 +1,5 @@
 <?php
-
+require_once "config.php";
 
 /* Connecting to database */
 
@@ -19,10 +19,10 @@ class Connection
  
  public function db_connect()
  {
-	$this->host = 'localhost:3306';
-	$this->user = 'root';
-	$this->pass = ''; 
-	$this->dbname = 'cora'; 
+	$this->host = DBHOST;
+	$this->user = DBUSER;
+	$this->pass = DBPASS; 
+	$this->dbname = DBNAME; 
 	$this->con = new mysqli($this->host,$this->user,$this->pass,$this->dbname) or die("Problemas con la conexion");
 	
 	if(!$this->con)

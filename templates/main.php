@@ -40,16 +40,16 @@
             ?>
         <div class="col">
         <div class="card h-100">
-          <img src="<?= $datos->imagen ?>" class="card-img-top" alt="<?= $datos->nombre ?>" height="150">
+          <img src="<?= $datos->imagen ?>" class="card-img-top" alt="<?= $datos->name ?>" height="150">
           <div class="card-body">
-            <h5 class="card-title"><?= $datos->nombre ?></h5>
+            <h5 class="card-title"><?= $datos->name ?></h5>
             <p class="card-text">$<?= $datos->precio ?></p>
-            <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalDescripcion<?= $datos->idproductos ?>">
+            <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#modalDescripcion<?= $datos->id ?>">
               Descripción
             </button>
             <form action="" method="post" class="mt-2">
-              <input type="hidden" name="ID" value="<?= openssl_encrypt($datos->idproductos, COD, KEY); ?>">
-              <input type="hidden" name="nombre" value="<?= openssl_encrypt($datos->nombre, COD, KEY); ?>">
+              <input type="hidden" name="ID" value="<?= openssl_encrypt($datos->id, COD, KEY); ?>">
+              <input type="hidden" name="nombre" value="<?= openssl_encrypt($datos->name, COD, KEY); ?>">
               <input type="hidden" name="precio" value="<?= openssl_encrypt($datos->precio, COD, KEY); ?>">
               <input type="hidden" name="cantidad" value="<?= openssl_encrypt(1, COD, KEY); ?>">
               <button type="submit" class="btn btn-primary btn-sm" name="btnAccion" value="Agregar">Agregar al carrito</button>
@@ -58,11 +58,11 @@
         </div>
         </div>
 
-        <div class="modal fade" id="modalDescripcion<?= $datos->idproductos ?>" tabindex="-1" aria-labelledby="modalDescripcionLabel<?= $datos->idproductos ?>" aria-hidden="true">
+        <div class="modal fade" id="modalDescripcion<?= $datos->id ?>" tabindex="-1" aria-labelledby="modalDescripcionLabel<?= $datos->id ?>" aria-hidden="true">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="modalDescripcionLabel<?= $datos->idproductos ?>">Descripción de <?= $datos->nombre ?></h5>
+              <h5 class="modal-title" id="modalDescripcionLabel<?= $datos->id ?>">Descripción de <?= $datos->name ?></h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">

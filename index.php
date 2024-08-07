@@ -4,8 +4,7 @@
 <html lang="es">
 
 <?php 
-require_once 'conexiones/conexion.php';
-require_once "conexiones/config.php";
+require_once 'conexiones/connection.php';
 require_once "functions/functions.php";
 render_template('templates','head');
 render_template('templates','header_index');

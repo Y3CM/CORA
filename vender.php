@@ -1,5 +1,5 @@
 <?php
-include "conexiones/conexion.php";
+include "conexiones/connection.php";
 require_once "functions/functions.php";
 verificar_session('"index.php"');
 ?>
