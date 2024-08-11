@@ -7,7 +7,7 @@ $crud = new Crud();
 
 if($_SERVER["REQUEST_METHOD"] == "DELETE")
 {
-$sql = "delete from productos where idproductos=".$_GET['idproductos'];
+$sql = "delete from productos where id=".$_GET['id'];
 $res = $crud->deletes($sql); 
 
 if ($res)
