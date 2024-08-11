@@ -209,3 +209,13 @@ http://localhost/CORA/api/delete-pedido.php?id=1
 "metodo_pago": "efectivo",
 "user_id": 100000005
 }
+
+{
+"status":"enviado",
+"descuento":10,
+"subtotal":10223,
+"impuesto":1942,
+"total":12165,
+"estado_pago": "completado",
+"metodo_pago": "efectivo"
+}
