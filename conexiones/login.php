@@ -5,7 +5,7 @@ $correo = $_POST['correo'];
 $contraseña = $_POST['password'];
 
 
-$validar = mysqli_query($conexion, "SELECT * FROM usuarios WHERE email ='$correo' and contraseña='$contraseña'");
+$validar = mysqli_query($conexion, "SELECT * FROM usuarios WHERE email ='$correo' and password='$contraseña'");
 
 if(mysqli_num_rows($validar) ==1){
 $_SESSION['nombre'] = $correo;
