@@ -21,8 +21,8 @@ $imagen = $data["imagen"];
 $user_id = $data["user_id"];	
 $categoria_id = $data["categoria_id"];
 
-$sql = ("insert into productos (id,name, descripcion, precio, stock, imagen, updated_at, created_at, user_id, categoria_id")  
-VALUES ('$nombre', '$descripcion', '$precio', '$stock', '$imagen', NULL, NOW(), $user_id, $categoria_id)";
+$sql = "INSERT INTO `productos`(`id`, `name`, `descripcion`, `precio`, `stock`, `imagen`, `updated_at`, `created_at`, `user_id`, `categoria_id`)  
+VALUES ('','$nombre', '$descripcion', '$precio', '$stock', '$imagen', NULL, NOW(), '$user_id', '$categoria_id')";
 $res = $crud->create($sql);     
 
 

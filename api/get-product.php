@@ -7,7 +7,7 @@ $crud = new Crud();
 
 if($_SERVER["REQUEST_METHOD"] == "GET")
 {
-$sql = "select * from productos where idproductos=".$_GET['idproductos'];
+$sql = "select * from productos where id=".$_GET['id'];
 $res = $crud->read($sql);
 
 $count = mysqli_num_rows($res);
