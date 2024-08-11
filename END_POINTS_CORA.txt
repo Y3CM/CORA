@@ -10,26 +10,24 @@ http://localhost/CORA/api/update-producto.php?idproductos=1
 
 ----------------------------crear----------------------------------------------
 {
-"idProducto":"2",
-"productoNuevo": "arroz crudo",
-"tipoNuevo": "integarl",
+"name": "arroz crudo",
 "descripcion": "bal bla bla bla",
 "precio":"2500",
-"cantidad": "100",
-"categoriaV": "cereal",
+"stock": "100",
+"user_id": 100000001,
+"categoria_id": 1,
 "imagen": "https://www.freepik.es/foto-gratis/arroz-molido-tazon-cuchara-madera-piso-cemento-negro_6446270.htm#fromView=search&page=1&position=1&uuid=b8986d14-40a7-403b-84ae-f0e31554cb5b"
 }
 
 ---------------------------update-----------------------------------------------
 {
-"idProducto":"2",
-"updateProducto": "arroz crudo",
-"updateTipo": "integral",
-"updateDescripcion": "bal bla bla bla",
-"updatePrecio":"2500",
-"updateCantidad": "100",
-"updateCategoria": "cereal",
-"updateImagen": "https://www.freepik.es/foto-gratis/arroz-molido-tazon-cuchara-madera-piso-cemento-negro_6446270.htm#fromView=search&page=1&position=1&uuid=b8986d14-40a7-403b-84ae-f0e31554cb5b"
+"name": "arroz crudo",
+"descripcion": "bal bla bla bla",
+"precio":"2500",
+"stock": "100",
+"user_id": 100000001,
+"categoria_id": 1,
+"imagen": "https://www.freepik.es/foto-gratis/arroz-molido-tazon-cuchara-madera-piso-cemento-negro_6446270.htm#fromView=search&page=1&position=1&uuid=b8986d14-40a7-403b-84ae-f0e31554cb5b"
 }
 
 -------------------------------------------------------------usuarios------------------------------------------------------
