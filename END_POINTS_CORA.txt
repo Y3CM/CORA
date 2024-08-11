@@ -159,3 +159,32 @@ http://localhost/CORA/api/delete-categoria.php?id=1
 "categoria":"categoria de prueba",
 "descripcion":"descripcion de prueba"
 }
+
+-------------------detalles-----------------------
+
+http://localhost/CORA/api/get-all-detalles.php
+
+http://localhost/CORA/api/get-detalle.php?id=1
+
+http://localhost/CORA/api/update-detalle.php?id=1
+
+http://localhost/CORA/api/create-detalle.php
+
+http://localhost/CORA/api/delete-detalle.php?id=1
+
+
+{
+"cantidad":5,
+"pedidos_user_id":100000005,
+"productos_id":11,
+"productos_user_id":100000001,
+"productos_categoria_id":1,
+"pedidos_id": 5
+}
+
+{
+"cantidad":5
+}
+
+
+----------------
