@@ -141,3 +141,21 @@ http://localhost/CORA/api/delete-reseña.php?id=1
 "contenido":"este espacio es de contenido edit",
 "calificacion": 3
 }
+
+-----------------categorias--------------------------
+
+http://localhost/CORA/api/get-all-categorias.php
+
+http://localhost/CORA/api/get-categoria.php?id=1
+
+http://localhost/CORA/api/update-categoria.php?id=1
+
+http://localhost/CORA/api/create-categoria.php
+
+http://localhost/CORA/api/delete-categoria.php?id=1
+
+
+{
+"categoria":"categoria de prueba",
+"descripcion":"descripcion de prueba"
+}
