@@ -1,8 +1,9 @@
 <?php
 require_once "../functions/functions.php";
+include_once("../crud/crud.php");
 verificar_session('"../index.php"');
-require_once "../conexiones/conexion.php";
-require_once "../conexiones/config.php"; 
+
+$crud = new crud();  
 ?>
 
 <!doctype html>
@@ -46,12 +47,12 @@ render_componentes('../componentes','modal');
     <h2 style=" color:#7EB031; padding: 20px;" id="recientes">Últimas publicaciones del blog</h2>
     <div class="row">
         <?php
-        $query = "SELECT * FROM entradas WHERE estado='verificado' ORDER BY fecha_publicacion DESC LIMIT 5"; 
-        $result = $conexion->query($query);
+        $query = "SELECT * FROM posts WHERE estado=1 ORDER BY create_at DESC LIMIT 5"; 
+        $result = $crud->read($query);
         while ($row = $result->fetch_assoc()) {
             echo '<div class="col-md-4" style="padding-bottom:50px">';
             echo '<div class="card">';
-            echo '<img src="'.$row['imagen'].'" class="card-img-top" style="height: 200px;" alt="Imagen de la entrada">';
+            echo '<img src="'.$row['image'].'" class="card-img-top" style="height: 200px;" alt="Imagen del post">';
             echo '<div class="card-body" style="height: 220px;">';
             echo '<h5 class="card-title">'.$row['titulo'].'</h5>';
             echo '<p class="card-text">'.$row['resumen'].'</p>';
