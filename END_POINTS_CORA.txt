@@ -89,3 +89,28 @@ http://localhost/CORA/api/delete-post.php?id=258741369
 "autor":"100000001"
 }
 
+---------------------------------comentarios--------------------------------
+
+http://localhost/CORA/api/get-all-comentarios.php
+
+http://localhost/CORA/api/get-comentario.php?id=1
+
+http://localhost/CORA/api/update-comentario.php?id=1
+
+http://localhost/CORA/api/create-comentario.php
+
+http://localhost/CORA/api/delete-comentario.php?id=1
+
+
+
+{
+"resumen":"resumen de prueba",
+"contenido":"este espacio es de contenido",
+"posts_id":1,
+"posts_autor":100000001,
+"autor":100000001
+}
+---------update-----------------------------------
+{
+"contenido":"este espacio es de contenido edit"
+}
