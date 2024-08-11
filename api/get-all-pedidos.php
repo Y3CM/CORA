@@ -7,7 +7,7 @@ $crud = new Crud();
 
 if($_SERVER["REQUEST_METHOD"] == "GET")
 {
-$sql = "select * from categorias";
+$sql = "select * from pedidos";
 $res = $crud->read($sql);
 
 $count = mysqli_num_rows($res);
@@ -24,7 +24,7 @@ if($count > 0)
 }
 else
 {
-	$result = array("status" => false , "message" => 'No Categoria(s) found...');
+	$result = array("status" => false , "message" => 'No pedido(s) found...');
 }
 
 echo json_encode($result);

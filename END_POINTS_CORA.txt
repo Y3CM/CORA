@@ -187,4 +187,25 @@ http://localhost/CORA/api/delete-detalle.php?id=1
 }
 
 
-----------------
+-----------------pedidos--------------------------
+
+http://localhost/CORA/api/get-all-pedidos.php
+
+http://localhost/CORA/api/get-pedido.php?id=1
+
+http://localhost/CORA/api/update-pedido.php?id=1
+
+http://localhost/CORA/api/create-pedido.php
+
+http://localhost/CORA/api/delete-pedido.php?id=1
+
+{
+"status":"pendiente",
+"descuento":10,
+"subtotal":10223,
+"impuesto":1942,
+"total":12165,
+"estado_pago": "pendiente",
+"metodo_pago": "efectivo",
+"user_id": 100000005
+}
