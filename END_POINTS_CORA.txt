@@ -112,3 +112,32 @@ http://localhost/CORA/api/delete-comentario.php?id=1
 {
 "contenido":"este espacio es de contenido edit"
 }
+
+
+
+-------------------------reseñas-----------------------------
+
+http://localhost/CORA/api/get-all-reseñas.php
+
+http://localhost/CORA/api/get-reseña.php?id=1
+
+http://localhost/CORA/api/update-reseña.php?id=1
+
+http://localhost/CORA/api/create-reseña.php
+
+http://localhost/CORA/api/delete-reseña.php?id=1
+
+
+{
+"reseña":"reseña de prueba",
+"calificacion":5,
+"producto_id":1,
+"producto_user_id":100000001,
+"producto_categoria_id": 1,
+"autor":100000001
+}
+
+{
+"contenido":"este espacio es de contenido edit",
+"calificacion": 3
+}
