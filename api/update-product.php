@@ -13,15 +13,15 @@ $data = array();
 //parsejson_decode_str(file_get_contents('php://input'),$data); 
 $data = json_decode(file_get_contents('php://input'),true);
 
-$updateProducto = $data["updateProducto"];
-$updateTipo = $data["updateTipo"];
-$updateDescripcion =  $data["updateDescripcion"];
-$updatePrecio =  $data["updatePrecio"];
-$updateCantidad = $data["updateCantidad"];
-$updateCategoria =  $data["updateCategoria"];
-$updateImagen = $data["updateImagen"];
+$nombre = $data["name"]; 
+$descripcion =  $data["descripcion"];
+$precio = $data["precio"]; 
+$stock =  $data["stock"]; 
+$imagen = $data["imagen"]; 
+$user_id = $data["user_id"];	
+$categoria_id = $data["categoria_id"];
 
-$sql = "update productos set  nombre = '$updateProducto', precio= '$updatePrecio' , imagen = '$updateImagen' , sub_categorias_idsub_categorias = '$updateCategoria', descripcion='$updateDescripcion', cantidad='$updateCantidad', tipo='$updateTipo' where idproductos=".$_GET['idproductos'];
+$sql = "update productos set  name = '$nombre', precio= '$precio' , imagen = '$imagen' , descripcion='$descripcion', stock='$stock', updated_at = NOW() where id=".$_GET['id'];
 $res = $crud->update($sql);
 
 
